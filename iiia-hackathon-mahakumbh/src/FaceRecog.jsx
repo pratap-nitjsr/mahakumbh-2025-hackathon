@@ -16,15 +16,15 @@ const fancyIcon = new Icon({
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAhS4VvJNsxgDW3N3gdRGcaKSDjLiPi3h8",
-    authDomain: "facerecognition-a185f.firebaseapp.com",
-    databaseURL: "https://facerecognition-a185f-default-rtdb.firebaseio.com",
-    projectId: "facerecognition-a185f",
-    storageBucket: "facerecognition-a185f.appspot.com",
-    messagingSenderId: "270279767911",
-    appId: "1:270279767911:web:71ac6c23181779b2a4a1c2",
-    measurementId: "G-SNXQPRES1Y"
-  };
+  apiKey: import.meta.env.VITE_REACT_APP_apiKey,
+  authDomain: import.meta.env.VITE_REACT_APP_authDomain,
+  databaseURL: import.meta.env.VITE_REACT_APP_databaseURL,
+  projectId: import.meta.env.VITE_REACT_APP_projectId,
+  storageBucket: import.meta.env.VITE_REACT_APP_storageBucket,
+  messagingSenderId: import.meta.env.VITE_REACT_APP_messagingSenderId,
+  appId: import.meta.env.VITE_REACT_APP_appId,
+  measurementId: import.meta.env.VITE_REACT_APP_measurementId
+};
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
